@@ -1,2 +1,4 @@
 mongoDB_URI=""
 sessionSecret=""
+sendgrid_api_key=""
+sendgrid_sender_email=""
