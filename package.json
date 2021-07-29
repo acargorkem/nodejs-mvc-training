@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.0.2",
     "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
     "helmet": "^4.6.0",
     "mongodb": "^4.0.1",
     "mongoose": "^5.13.3",
