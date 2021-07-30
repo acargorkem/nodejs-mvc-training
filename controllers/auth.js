@@ -105,8 +105,7 @@ exports.getResetPassword = (req, res, next) => {
 exports.postResetPassword = (req, res, next) => {
   crypto.randomBytes(32, (err, buffer) => {
     if (err) {
-      console.log(err);
-      return res.redirect("/reset");
+      return next(err);
     }
 
     const token = buffer.toString("hex");
@@ -131,7 +130,9 @@ exports.postResetPassword = (req, res, next) => {
           `,
         });
       })
-      .catch();
+      .catch((err) => {
+        console.log(err);
+      });
   });
 };
 
@@ -151,7 +152,9 @@ exports.getNewPassword = (req, res, next) => {
         passwordToken: token,
       });
     })
-    .catch();
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 exports.postNewPassword = (req, res, next) => {

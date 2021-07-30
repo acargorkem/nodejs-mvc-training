@@ -9,7 +9,7 @@
     "start-server": "node app.js"
   },
   "author": "Görkem Acar",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.12"
   },
