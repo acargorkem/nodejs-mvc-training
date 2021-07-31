@@ -92,7 +92,6 @@ exports.productRules = () => {
       .isLength({ min: 3 })
       .trim()
       .withMessage("Title must be at least 3 characters long."),
-    body("imageUrl").isURL().withMessage("Please enter a valid URL."),
     body("price").isFloat().withMessage("Please enter a valid number."),
     body("description")
       .isLength({ min: 2, max: 500 })
@@ -113,7 +112,6 @@ exports.addProductCheck = (req, res, next) => {
     pageTitle: "Add Product",
     product: {
       title: req.body.title,
-      imageUrl: req.body.imageUrl,
       price: req.body.price,
       description: req.body.description,
     },
@@ -136,7 +134,6 @@ exports.editProductCheck = (req, res, next) => {
     pageTitle: "Edit-product",
     product: {
       title: req.body.title,
-      imageUrl: req.body.imageUrl,
       price: req.body.price,
       description: req.body.description,
     },
